@@ -1,16 +1,34 @@
-<p>Welcome, {{username}}!</p>
-<p>You currently have balance of <code>{{balance}}</code> in your account.</p>
-<p>Use the form below to transfer funds to another account.</p>
-<form action="/transfer" method="GET">
-	<div>
-		<label>Send funds to account: <input type="text" name="to" value=""></label>
+<div class="login-container">
+	<div class="login-box">
+		<div class="box-left">
+			<h4>Welcome back </h4>
+			<h1>{{username}}</h1>
+		</div>
+		<div class="box-right">
+			<div class="account">
+				<div class="account-top">
+					<h4>Aktuelles Guthaben:</h4>
+					<h1><span id="geld">{{balance}}</span> €</h1>
+				</div>
+				<div class="line"></div>
+				<div class="account-bottom">
+					<form id="home-form" action="/transfer" method="GET">
+						<div>
+							<input placeholder="Geld senden an: " type="text" name="to" value="Viet">
+						</div>
+						<br>
+						<div>
+							<input placeholder="Wert" type="text" name="amount" value="">
+						</div>
+						<br>
+						<div>
+							<input type="submit" value="überweisen">
+						</div>
+					</form>
+				</div>
+
+			</div>
+
+		</div>
 	</div>
-	<br>
-	<div>
-		<label>Amount: <input type="text" name="amount" value=""></label>
-	</div>
-	<br>
-	<div>
-		<input type="submit" value="Transfer">
-	</div>
-</form>
+</div>
