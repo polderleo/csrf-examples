@@ -1,13 +1,18 @@
-
-<h2>Exploiting the GET route</h2>
-<p>The <code>GET /transfer</code> route is the most easily exploited. It's as simple as tricking the target user into opening a webpage with a malicious <code>&lt;img&gt;</code> tag:</p>
-<div><img src="http://localhost:3000/transfer?to=Viet&amount=4"></div>
-<br>
-<p>Or by tricking the target user into clicking a malicious link:</p>
-<div><a href="http://localhost:3000/transfer?to=Viet&amount=7">Click me!</a></div>
-
-<h2>Exploiting the POST route</h2>
-<p>The <code>POST /transfer</code> route is a little more difficult to exploit and requires using JavaScript to submit an HTML form:</p>
-<div>
-	<iframe width="1" height="1" src="/malicious-form"></iframe>
+<div class="evil-container">
+    <h2>Ausnutzen von GET-Anfragen</h2>
+    <br>
+    <p>Die <code>GET /transfer</code> Route ist am einfachsten abzufangen. Dabei wird dem User ein infiziertes Bild angezeigt: </p>
+    <div><img src="http://localhost:3000/transfer?to=Viet&amount=4"></div>
+    <br>
+    <p>Genauso kann man einen Link einfügen welcher einen Transfer auslöst: </p> <br>
+    <div><a href="http://localhost:3000/transfer?to=Viet&amount=7">Click me!</a></div>
+    <br>
+    <br>
+    <h2>Ausnutzung der POST Route</h2>
+    <br>
+    <p>Die <code>POST /transfer</code> Route ist ein bisschen komplizierter auszunutzen und benötigt deshalb JavaScript um den Transfer durchführen zu können: </p>
+    <br>
+    <div>
+        <iframe width="100%" height="400px" src="/malicious-form"></iframe>
+    </div>
 </div>

@@ -9,6 +9,7 @@ html, body {
      height: 100%;
 
      font-family: sans-serif;
+     background-color: rgb(231, 231, 231);
 }
 
 .login-container {
@@ -16,6 +17,7 @@ html, body {
      height: 100%;
 
      background-image: url("../img/bg.jpg");
+     background-size: cover;
 
      display: flex;
      align-items: center;
@@ -24,9 +26,9 @@ html, body {
 .login-box {
      width: calc(16 * 60px);
      height: calc(9 * 60px);
-     /*-webkit-box-shadow: 10px 10px 30px -7px rgba(105,105,105,1);*/
+     /* -webkit-box-shadow: 10px 10px 30px -7px rgba(105,105,105,1);*/
      /*-moz-box-shadow: 10px 10px 30px -7px rgba(105,105,105,1);*/
-     /*box-shadow: 10px 10px 30px -7px rgba(105,105,105,1);*/
+     /*box-shadow: 10px 10px 30px -7px rgba(105,105,105,1); */
      display: flex;
 
 }
@@ -35,8 +37,8 @@ html, body {
      background-color: #4F575A;
      overflow: hidden;
      width: 40%;
-     border-top-left-radius: 15px;
-     border-bottom-left-radius: 15px;
+     border-top-left-radius: 10px;
+     border-bottom-left-radius: 10px;
 
      display: flex;
      flex-direction: column;
@@ -49,8 +51,8 @@ html, body {
      background-color: #fff;
      overflow: hidden;
      width: 60%;
-     border-top-right-radius: 15px;
-     border-bottom-right-radius: 15px;
+     border-top-right-radius: 10px;
+     border-bottom-right-radius: 10px;
 
      display: flex;
      align-items: center;
@@ -147,4 +149,17 @@ html, body {
      background: none;
 
      margin-top: 25px;
+}
+
+.evil-container {
+    width: 65%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 35px;
+    height: 100%;
+}
+
+iframe {
+    border: none;
+    box-shadow: none;
 }

@@ -199,6 +199,8 @@ app.listen(3000, function() {
 // Let's make another express app.
 var evilApp = express();
 
+evilApp.use(express.static('public'));
+
 // Templating middleware.
 evilApp.engine('html', exphbr({
 	defaultLayout: 'main',
