@@ -11,6 +11,8 @@ var session = require('express-session');
 // Create our express app.
 var app = express();
 
+app.use(express.static('public'));
+
 // Parse data from HTML forms (like from our login page).
 app.use(bodyParser.urlencoded({ extended: false }));
 
@@ -62,8 +64,8 @@ app.get('/', requireLogin, csrfProtection, function(req, res, next) {
 // Super simple login system.
 // This is not how real login systems should work.
 var validLogins = [
-	{ username: 'bob', password: 'test' },
-	{ username: 'alice', password: 'test' }
+	{ username: 'Leo', password: '1234' },
+	{ username: 'Viet', password: '1234' }
 ];
 
 app.get('/login', function(req, res, next) {
@@ -126,8 +128,8 @@ app.post('/transfer', requireLogin, csrfProtection, function(req, res, next) {
 // Simple accounts ledger.
 // This information would normally be stored in a database like MySQL, PostgreSQL, etc.
 var accounts = {
-	bob: '500',
-	alice: '500'
+	Leo: '500',
+	Viet: '500'
 };
 
 var transferFunds = function(to, from, amount, cb) {
@@ -197,6 +199,8 @@ app.listen(3000, function() {
 
 // Let's make another express app.
 var evilApp = express();
+
+evilApp.use(express.static('public'));
 
 // Templating middleware.
 evilApp.engine('html', exphbr({

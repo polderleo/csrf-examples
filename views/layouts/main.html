@@ -2,11 +2,24 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>CSRF Examples</title>
+	<title>CSRF Beispiel</title>
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 	{{{body}}}
 
+	<script>
+		let geld = document.getElementById("geld");
+		if (geld.innerText >= 100) {
+		    geld.style.color = "#00d82e";
+		}
+		else if ( geld.innerText >= 10) {
+            geld.style.color = "#d8902e";
+		}
+		else {
+            geld.style.color = "#d82031";
+		}
+	</script>
 </body>
 </html>
